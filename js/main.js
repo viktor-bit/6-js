@@ -33,14 +33,16 @@ daliklis=daliklis + 2;
 
 function daugyba(m,n){
     if(typeof m !== 'number'){
-        return ''
+        return 'ivestas ne skaicius'
     }
-
-
-    
-    
         return m * n;
-}
-
+    }
 console.log( daugyba(2,2));
-console.log( daugyba("50",2));
+console.log( daugyba(null,2));
+
+let ff= 65.03;
+ff=ff.toFixed(0);
+console.log( ff )
+
+
+let[ c25,c50,c100]=[0,0,0];
