@@ -38,7 +38,7 @@ function daugyba(m,n){
 
 
     
-    )
+    
         return m * n;
 }
 
