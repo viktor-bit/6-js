@@ -1,0 +1,49 @@
+function skaitmenuKiekisSkaiciuje( number ) {
+    if ( typeof(number) !== 'number' ||
+         isFinite(number) === false ) {
+        return 'Pateikta netinkamo tipo reikšmė.';
+    }
+
+    // LOGIKA
+    // spejamas pradinis ilgis
+
+    let ilgis = (''+number).length;
+    console.log( ''+number );
+
+    // pataisa del minuso
+    if ( number < 0 ) {
+        ilgis--;
+    }
+
+    // pataisa del desimtainiu skaiciu
+    if ( number % 1 !== 0 ) {
+        ilgis--;
+    }
+
+    // rezultato grazinimas
+    return ilgis;
+}
+
+
+
+console.log( skaitmenuKiekisSkaiciuje( true ) );
+console.log( skaitmenuKiekisSkaiciuje( 'asd' ) );
+console.log( skaitmenuKiekisSkaiciuje( NaN ) );
+console.log( skaitmenuKiekisSkaiciuje( Infinity ) );
+
+console.log( skaitmenuKiekisSkaiciuje( 5 ), '-', 1 );
+console.log( skaitmenuKiekisSkaiciuje( 781 ), '-', 3 );
+console.log( skaitmenuKiekisSkaiciuje( 37060123456 ), '-', 11 );
+console.log( skaitmenuKiekisSkaiciuje( -24 ), '-', 2 );
+console.log( skaitmenuKiekisSkaiciuje( 3.14159256 ), '-', 9 );
+console.log( skaitmenuKiekisSkaiciuje( -3.14159256 ), '-', 9 );
+console.log( skaitmenuKiekisSkaiciuje( 0 ), '-', 1 );
+console.log( skaitmenuKiekisSkaiciuje( -0 ), '-', 1 );
+console.log( skaitmenuKiekisSkaiciuje( +0 ), '-', 1 );
+console.log( skaitmenuKiekisSkaiciuje( 0.5000000 ), '-', 2 );
+console.log( skaitmenuKiekisSkaiciuje( 1e2 ), '-', 3 );
+console.log( skaitmenuKiekisSkaiciuje( 1e6 ), '-', 7 );
+
+console.log( skaitmenuKiekisSkaiciuje( 1e21 ), '-', 22 );
+console.log( skaitmenuKiekisSkaiciuje( 1e-21 ), '-', 22 );
+
