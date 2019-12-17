@@ -1,20 +1,21 @@
 console.log("Labas rytas");
 console.log("sveiki");
-
+let a11=1
 let daliklis=3;
 const a1=-25;
 const b=11;
 let c=0;
 let a=a1; 
-for ( a ; a <= b; a++) { 
+for ( a ; a<=b; a++) { 
   if( a % daliklis === 0 )
-    c++;   
+    c++ , a11=3 ;  
 }
+console.log(a11+' '+a);
 console.log('skaiciu intervale tarp ' + a1 + ' ir ' + b + ', besidalinanciu be liekannos is ' + daliklis + ' yra ' + c + ' vienetai');
-a=a1;
 
+
+a=a1;
 daliklis=daliklis + 2;
-    if(daliklis<= 7 );
         for ( a ; a <= b; a++) { 
         if( a % daliklis === 0 )
         c++;   
@@ -26,10 +27,10 @@ daliklis=daliklis + 2;
       if( a % daliklis === 0 )
       c++;   
 }
+    console.log('skaiciu intervale tarp ' + a1 + ' ir ' + b + ', besidalinanciu be liekannos is ' + daliklis + ' yra ' + c + ' vienetai');
 
 
 
-  console.log('skaiciu intervale tarp ' + a1 + ' ir ' + b + ', besidalinanciu be liekannos is ' + daliklis + ' yra ' + c + ' vienetai');
 
 function daugyba(m,n){
     if(typeof m !== 'number'){
@@ -45,4 +46,3 @@ ff=ff.toFixed(0);
 console.log( ff )
 
 
-let[ c25,c50,c100]=[0,0,0];
